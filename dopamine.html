@@ -1,15 +1,36 @@
-<h1>Dopamine Activator</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dopamine Activator</title>
+  <script src="js/dopamine.js" defer></script>
+</head>
+<body>
+  <h1>Dopamine Activator</h1>
 
-<button onclick="spin()">🎲 Give me dopamine!</button>
+  <button onclick="spin()">🎲 Give me dopamine!</button>
 
-<p id="result" style="font-weight: bold; margin-top: 1rem;"></p>
+  <p id="result" style="font-weight: bold; margin-top: 1rem;"></p>
 
-<div id="log-section" style="display: none; margin-top: 1rem;">
-  <label for="input-result">Что получилось?</label><br>
-  <input type="text" id="input-result" placeholder="Введи результат" />
-  <button onclick="saveResult()">💾 Сохранить</button>
-</div>
+  <div id="log-section" style="display: none; margin-top: 1rem;">
+    <label for="input-result">Что получилось?</label><br>
+    <input type="text" id="input-result" placeholder="Введи результат" />
+    <button onclick="saveResult()">💾 Сохранить</button>
+  </div>
 
-<hr>
-<h3>История:</h3>
-<ul id="history"></ul>
+  <hr>
+  <h3>История:</h3>
+  <ul id="history"></ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
