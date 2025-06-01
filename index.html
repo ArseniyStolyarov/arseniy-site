@@ -1,23 +1,33 @@
-<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arseniy Stolyarov</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
-    <div class="max-w-2xl mx-auto mt-24 px-4">
-      <h1 class="text-4xl font-bold mb-4">Arseniy Stolyarov</h1>
-      <p class="text-lg mb-6">
-        Economist. Researcher. ADHD-gibbon. I study oil auctions, Telegram echo chambers, and run ultramarathons when life falls apart.
-      </p>
-      <div class="flex space-x-6 text-blue-600 underline text-md">
-        <a href="mailto:youremail@example.com">Email</a>
-        <a href="cv.pdf">CV</a>
-        <a href="https://t.me/yourchannel" target="_blank">Telegram</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arseniy Stolyarov</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <header class="p-4 shadow-md bg-white">
+    <nav class="flex justify-between max-w-4xl mx-auto">
+      <div class="font-bold">Arseniy</div>
+      <div class="space-x-4">
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="research.html" class="hover:underline">Research</a>
+        <a href="telegram.html" class="hover:underline">Telegram</a>
+        <a href="dopamine.html" class="hover:underline text-red-600">Dopamine</a>
       </div>
+    </nav>
+  </header>
+  <main class="max-w-3xl mx-auto mt-16 px-4">
+    <h1 class="text-4xl font-bold mb-4">Arseniy Stolyarov</h1>
+    <p class="text-lg mb-6">PhD Candidate. Researcher. ADHD-warrior. Gibbon-powered.</p>
+    <div class="flex space-x-6">
+      <a href="cv.pdf" class="text-blue-600 underline">CV</a>
+      <a href="mailto:astolyarov@wisc.edu" class="text-blue-600 underline">Email</a>
+      <a href="https://t.me/yourchannel" class="text-blue-600 underline" target="_blank">Telegram</a>
     </div>
-  </body>
+  </main>
+</body>
 </html>
