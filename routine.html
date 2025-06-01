@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Утренняя Рутина</title>
+  <script src="js/routine.js" defer></script>
+</head>
+<body>
+  <h1>🦷 Утренняя Рутина</h1>
+
+  <label><input type="checkbox" id="teeth" /> Почистил зубы</label><br>
+  <label><input type="checkbox" id="shower" /> Принял душ</label><br><br>
+
+  <label for="runDistance">Пробежка (км):</label>
+  <input type="number" id="runDistance" min="0" step="0.1" /><br><br>
+
+  <label for="runTime">Время (мин):</label>
+  <input type="number" id="runTime" min="0" /><br><br>
+
+  <button onclick="saveRoutine()">💾 Сохранить рутину</button>
+
+  <hr>
+  <h2>История</h2>
+  <ul id="history"></ul>
+</body>
+</html>
