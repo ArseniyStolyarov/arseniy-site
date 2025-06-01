@@ -1,35 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Dopamine Activator</title>
   <script src="js/dopamine.js" defer></script>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    #protected { display: none; }
+    .routine-box { margin-top: 2rem; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9; }
+    .routine-box h3 { margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body>
-  <h1>Dopamine Activator</h1>
-
-  <button onclick="spin()">🎲 Give me dopamine!</button>
-
-  <p id="result" style="font-weight: bold; margin-top: 1rem;"></p>
-
-  <div id="log-section" style="display: none; margin-top: 1rem;">
-    <label for="input-result">Что получилось?</label><br>
-    <input type="text" id="input-result" placeholder="Введи результат" />
-    <button onclick="saveResult()">💾 Сохранить</button>
+  <div id="auth">
+    <h2>🔒 Защищённая зона</h2>
+    <p>Введите пароль:</p>
+    <input type="password" id="password-input" />
+    <button onclick="checkPassword()">Войти</button>
+    <p id="auth-error" style="color: red;"></p>
   </div>
 
-  <hr>
-  <h3>История:</h3>
-  <ul id="history"></ul>
+  <div id="protected">
+    <h1>Dopamine Activator</h1>
+    <button onclick="spin()">🎲 Give me dopamine!</button>
+    <p id="result" style="font-weight: bold; margin-top: 1rem;"></p>
+
+    <div id="log-section" style="display: none; margin-top: 1rem;">
+      <label for="input-result">Что получилось?</label><br>
+      <input type="text" id="input-result" placeholder="Введи результат" />
+      <button onclick="saveResult()">💾 Сохранить</button>
+    </div>
+
+    <div class="routine-box">
+      <h3>☀️ Утренняя рутина</h3>
+      <ul>
+        <li>🏃‍♂️ Пробежка</li>
+        <li>🥣 Гречка</li>
+        <li>🚿 Душ</li>
+        <li>☕️ Кофе</li>
+      </ul>
+    </div>
+
+    <div class="routine-box">
+      <h3>🌙 Вечерняя рутина</h3>
+      <ul>
+        <li>🚶‍♂️ Прогулка</li>
+        <li>📝 План на завтра</li>
+        <li>📵 Без экрана</li>
+        <li>🛏 Сон как у пса</li>
+      </ul>
+    </div>
+
+    <hr>
+    <h3>История:</h3>
+    <ul id="history"></ul>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const correctPassword = "arseniy24/7"; // можно сменить
+      const input = document.getElementById("password-input").value;
+      const error = document.getElementById("auth-error");
+
+      if (input === correctPassword) {
+        document.getElementById("auth").style.display = "none";
+        document.getElementById("protected").style.display = "block";
+      } else {
+        error.textContent = "Неверный пароль. Пшел вон!";
+      }
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
